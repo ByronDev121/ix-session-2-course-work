@@ -327,3 +327,29 @@ console.log(personClass);
 console.log(personClass.getFullName());
 
 // Write some function
+
+// This function should print out the first 10 digits fo the fibonacci sequence
+function fib() {
+  let curr = 0;
+  let next = 1;
+  for (let i = 0; i < 10; i++) {
+    console.log(curr);
+    let placeHolder = next;
+    next = curr + next;
+    curr = placeHolder;
+  }
+}
+
+function recursiveFib(curr, next, index) {
+  if (index >= 10) {
+    return;
+  }
+  console.log(curr);
+  let placeHolder = next;
+  next = curr + next;
+  curr = placeHolder;
+  recursiveFib(curr, next, index + 1);
+}
+
+fib();
+recursiveFib(0, 1, 0);
