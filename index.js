@@ -325,3 +325,5 @@ const personClass = new Person(
 
 console.log(personClass);
 console.log(personClass.getFullName());
+
+// Write some function
